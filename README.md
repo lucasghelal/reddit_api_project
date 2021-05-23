@@ -26,3 +26,7 @@
   ```
   python manage.py migrate
   ```
+    - create a superuser
+  ```
+  python manage.py createsuperuser
+  ```
