@@ -10,9 +10,19 @@
   ```
 - Inside of django-api create a new project
   ```
-  conda create --name django-api python
+  django-admin startprojet reddit_api_project
   ```
 - create a new app
   ```
-  conda create --name django-api python
+  python manage.py startapp posts
+  ```
+
+  - makemigrations
+  ```
+  python manage.py makemigrations
+  ```
+
+  - create a new app
+  ```
+  python manage.py migrate
   ```
