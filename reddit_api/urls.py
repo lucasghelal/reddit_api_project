@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from posts import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -25,4 +27,4 @@ urlpatterns = [
     path('api/posts/<int:pk>/vote', views.VoteCreate.as_view()),
     path('api-auth/', include('rest_framework.urls')),
     
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
